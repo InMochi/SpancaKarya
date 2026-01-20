@@ -3,18 +3,21 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const spancaSchema = new Schema({
-
-    title: {
+    
+    judul: {
         type: String,
         required: true
     },
-    major: {
+    jurusan: {
         type: String,
         required: true
     },
-    class: {
+    kelas: {
         type: Number,
         required: true
     }
 
 }, { timestamps: true})
+
+module.exports = mongoose.model('Spanca', spancaSchema)
+

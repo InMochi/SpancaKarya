@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 })
      
 // routes rute cuy
-app.use('/api/spanca',spancaRoutes)
+app.use('/api/spancas',spancaRoutes)
 
 
 
