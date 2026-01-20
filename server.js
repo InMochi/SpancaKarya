@@ -2,7 +2,7 @@ require('dotenv').config()
 require('dns').setDefaultResultOrder('ipv4first')
 
 const express = require('express')
-const workoutRoutes = require('./routes/workouts.js')
+const spancaRoutes = require('./routes/spancas.js')
 const e = require('express')
 const mongoose = require('mongoose')
 
@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 })
      
 // routes rute cuy
-app.use('/api/workouts',workoutRoutes)
+app.use('/api/spanca',spancaRoutes)
 
 
 
