@@ -1,5 +1,8 @@
 const express = require("express");
-const Spanca = require("../models/SpancaModel");
+const {
+  buatKarya,
+  
+} = require("../controllers/spancaController")
 
 const router = express.Router();
 
@@ -37,16 +40,32 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
 // Fungsi Buat Nambah Karya Baru
-router.post("/", async (req, res) => {
-  const { judul, jurusan, kelas } = req.body;
-  try {
-    const spanca = await Spanca.create({ judul, jurusan, kelas });
-    res.status(200);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
+router.post("/", buatKarya);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // delete sebuah karya
 router.delete("/:id", async (req, res) => {
